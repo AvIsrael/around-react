@@ -1,4 +1,4 @@
-Project 10: Around React
+Project 10: Around React v0.1.1
 
 # Getting Started with Create React App
 
