@@ -4,7 +4,7 @@ import DDDSection from "../components/DDDSection";
 
 import {
     settingsValidator
-} from "../utils/constants"
+} from "../components/constants"
 import PopupWithForm from "../components/PopupWithForms";
 import DDDPopupWithImage from "../components/DDDPopupWithImage.js";
 import DDDUserInfo from "../components/DDDUserInfo.js";
