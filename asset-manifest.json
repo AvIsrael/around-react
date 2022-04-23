@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/around-react/static/css/main.5adb7141.css",
+    "main.js": "/around-react/static/js/main.e28cc6e2.js",
+    "static/js/787.1c78f32b.chunk.js": "/around-react/static/js/787.1c78f32b.chunk.js",
+    "static/media/Inter-Variable.ttf": "/around-react/static/media/Inter-Variable.b4c30855aff392d7e8dc.ttf",
+    "static/media/header-logo.svg": "/around-react/static/media/header-logo.cc37b6720415d7121232e770f810975b.svg",
+    "static/media/button-heart.svg": "/around-react/static/media/button-heart.082f7b4cbd1f60b4a848.svg",
+    "index.html": "/around-react/index.html",
+    "static/media/button-del.svg": "/around-react/static/media/button-del.01f9e7491d923fa20770.svg",
+    "static/media/button-heart_active.svg": "/around-react/static/media/button-heart_active.5044bc86e1a82f15cede.svg",
+    "static/media/button-cancel.svg": "/around-react/static/media/button-cancel.da4edc4dee9f63e7dce4.svg",
+    "static/media/button-edit.svg": "/around-react/static/media/button-edit.4512588d48fd1706fe06.svg",
+    "static/media/button-editV2.svg": "/around-react/static/media/button-editV2.6c7bf05444b9793fdf6e.svg",
+    "static/media/button-add.svg": "/around-react/static/media/button-add.e008c015a81fb7033fa2.svg",
+    "main.5adb7141.css.map": "/around-react/static/css/main.5adb7141.css.map",
+    "main.e28cc6e2.js.map": "/around-react/static/js/main.e28cc6e2.js.map",
+    "787.1c78f32b.chunk.js.map": "/around-react/static/js/787.1c78f32b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5adb7141.css",
+    "static/js/main.e28cc6e2.js"
+  ]
+}
