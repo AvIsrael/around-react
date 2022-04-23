@@ -1,5 +1,5 @@
 # Project 10: Around React v0.1.1
-## Link to project: [:compass:](https://AvIsrael.github.io/around-react)
+## Link to project: [:compass:](https://avisrael.github.io/around-react/)
 
 # Getting Started with Create React App
 
