@@ -1,41 +1,33 @@
-import DDDPopUp from "./DDDPopUp.js";
+export const PopupWithForm = ({
+    name,
+    isOpen,
+    title,
+    onClose,
+    submitButton,
+    children,
+                              })=> {
+    return (
+        <div  className={`popup popup_type_${name} ${isOpen ? "popup_opened" : ""}`}>
+            <div className="popup__container">
+                <h2 className="popup__title">{title}</h2>
 
-export default class PopupWithForm extends DDDPopUp {
-    constructor(modalWindow, handleFormSubmit, buttonTextValue) {
-        super(modalWindow);
-        this._handleFormSubmit = handleFormSubmit;
-        this._popupForm = this._popupElement.querySelector(".popup__form");
-        this._buttonSubmit = this._popupElement.querySelector(".popup__button-sbmt");
-        this._buttonTextValue = buttonTextValue;
-        this._inputs = Array.from(
-            this._popupForm.querySelectorAll(".popup__item")
-        );
-    }
-
-    _getInputValues() {
-        const inputValues = {};
-        this._inputs.forEach((input) => {
-            inputValues[input.name] = input.value;
-        });
-        return inputValues;
-    }
-
-    showMessageLoading() {
-        this._buttonSubmit.value = "Saving...";
-    }
-    hideMessageLoading() {
-        this._buttonSubmit.value = this._buttonTextValue;
-    }
-
-    close() {
-        super.close();
-        this._popupForm.reset();
-    }
-
-    setEventListeners() {
-        super.setEventListeners();
-        this._popupForm.addEventListener("submit", () =>
-            this._handleFormSubmit(this._getInputValues())
-        );
-    }
+                <form
+                    name={`form-${name}`}
+                    className={`popup__form popup__form_type_${name}`}
+                    action="#"
+                >
+                    {children}
+                    <button type="submit" className="popup__button-sbmt">
+                        {submitButton}
+                    </button>
+                    <button
+                        className="button-reset popup__button"
+                        type="button"
+                        aria-label="cancel"
+                        onClick={onClose}
+                    ></button>
+                </form>
+            </div>
+        </div>
+    )
 }

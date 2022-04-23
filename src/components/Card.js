@@ -3,10 +3,10 @@ export const Card = ({onCardClick, card, onConfirmDeleteClick}) => {
         onCardClick(card);
     }
     return (
-        <template id="card">
+
             <li className="elements__item">
-                <img className="elements__grid-image" alt="#" onClick={handleClick}
-                     style={{backgroundImage: `url(${card.link})`}}></img>
+                <div className="elements__grid-image" onClick={handleClick}
+                     style={{backgroundImage: `url(${card.link})`}}></div>
                     <div className="elements__info">
                         <h2 className="elements__description">{card.name}</h2>
                         <div className="elements__likes-zone">
@@ -20,8 +20,5 @@ export const Card = ({onCardClick, card, onConfirmDeleteClick}) => {
                             type="button"
                             aria-label="delete"
                             onClick={onConfirmDeleteClick}></button>
-            </li>
-        </template>);
+            </li>);
     }
-
-
