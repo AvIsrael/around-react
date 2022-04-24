@@ -2,8 +2,9 @@ import {useState, useEffect} from "react";
 import api from "../utils/Api";
 import Card from "./Card";
 
-const Main = ({onEditProfileClick, onEditAvatarClick, onAddPlaceClick, onCardClick, onConfirmDeleteClick,
-                     }) => {
+const Main = ({
+                  onEditProfileClick, onEditAvatarClick, onAddPlaceClick, onCardClick, onConfirmDeleteClick,
+              }) => {
     const [userName, setUserName] = useState("");
     const [userDescription, setUserDescription] = useState("");
     const [userAvatar, setUserAvatar] = useState("");
@@ -30,12 +31,11 @@ const Main = ({onEditProfileClick, onEditAvatarClick, onAddPlaceClick, onCardCli
             });
     }, []);
 
-    return (
-        <main className="content">
+    return (<main className="content">
             <section className="profile">
                 <div className="profile__image">
                     <div className="profile__avatar"
-                         style={{ backgroundImage: `url(${userAvatar})` }}></div>
+                         style={{backgroundImage: `url(${userAvatar})`}}></div>
                     <div className="profile__image-overlay"
                          onClick={onEditAvatarClick}></div>
                 </div>
@@ -64,11 +64,9 @@ const Main = ({onEditProfileClick, onEditAvatarClick, onAddPlaceClick, onCardCli
                             card={card}
                             onCardClick={onCardClick}
                             onConfirmDeleteClick={onConfirmDeleteClick}
-                        />
-                    ))}
+                        />))}
                 </ul>
             </section>
-        </main>
-    )
+        </main>)
 }
 export default Main;

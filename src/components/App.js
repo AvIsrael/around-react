@@ -5,12 +5,12 @@ import {useState} from "react";
 import PopupWithForm from "./PopupWithForms";
 import ImagePopup from "./ImagePopup";
 
-export function App(){
+export function App() {
     const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
     const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
     const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
     const [isConfirmDeletePopupOpen, setIsConfirmDeletePopupOpen] = useState(false);
-    const [selectedCard, setSelectedCard] = useState(undefined);
+    const [selectedCard, setSelectedCard] = useState(null);
 
     const handleEditAvatarClick = () => {
         setIsEditAvatarPopupOpen(true);
@@ -33,13 +33,12 @@ export function App(){
         setIsEditProfilePopupOpen(false);
         setIsAddPlacePopupOpen(false);
         setIsConfirmDeletePopupOpen(false);
-        setSelectedCard(undefined);
+        setSelectedCard(null);
     }
 
-    return (
-        <div className="page">
+    return (<div className="page">
             <div className="wrapper">
-                <Header />
+                <Header/>
                 <Main
                     onEditAvatarClick={handleEditAvatarClick}
                     onEditProfileClick={handleEditProfileClick}
@@ -132,8 +131,7 @@ export function App(){
                 <ImagePopup
                     card={selectedCard}
                     onClose={closeAllPopups}/>
-                <Footer />
+                <Footer/>
             </div>
-        </div>
-    );
+        </div>);
 }
