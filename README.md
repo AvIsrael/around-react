@@ -1,8 +1,10 @@
 # Project 10: Around React
 ## Link to project: [:compass:](https://avisrael.github.io/around-react/)
 
-How to create App with CRA
+
+
 <details>
+    <summary>How to create App with CRA</summary>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
