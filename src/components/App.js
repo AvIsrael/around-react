@@ -12,20 +12,15 @@ export function App() {
     const [isConfirmDeletePopupOpen, setIsConfirmDeletePopupOpen] = useState(false);
     const [selectedCard, setSelectedCard] = useState(null);
 
-    const handleEditAvatarClick = () => {
-        setIsEditAvatarPopupOpen(true);
+    const handleEditAvatarClick = () => {setIsEditAvatarPopupOpen(true);
     }
-    const handleEditProfileClick = () => {
-        setIsEditProfilePopupOpen(true);
+    const handleEditProfileClick = () => {setIsEditProfilePopupOpen(true);
     }
-    const handleAddPlaceClick = () => {
-        setIsAddPlacePopupOpen(true);
+    const handleAddPlaceClick = () => {setIsAddPlacePopupOpen(true);
     }
-    const handleConfirmDeleteClick = () => {
-        setIsConfirmDeletePopupOpen(true);
+    const handleConfirmDeleteClick = () => {setIsConfirmDeletePopupOpen(true);
     }
-    const handleCardClick = (card) => {
-        setSelectedCard(card);
+    const handleCardClick = (card) => {setSelectedCard(card);
     }
 
     const closeAllPopups = () => {

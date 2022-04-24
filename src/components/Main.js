@@ -2,9 +2,8 @@ import {useState, useEffect} from "react";
 import api from "../utils/Api";
 import Card from "./Card";
 
-const Main = ({
-                  onEditProfileClick, onEditAvatarClick, onAddPlaceClick, onCardClick, onConfirmDeleteClick,
-              }) => {
+function Main ({onEditProfileClick, onEditAvatarClick, onAddPlaceClick, onCardClick, onConfirmDeleteClick,
+              }) {
     const [userName, setUserName] = useState("");
     const [userDescription, setUserDescription] = useState("");
     const [userAvatar, setUserAvatar] = useState("");
