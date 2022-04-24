@@ -2,7 +2,6 @@ import {Header} from './Header';
 import {Footer} from "./Footer";
 import {Main} from "./Main";
 import {useState} from "react";
-
 import {PopupWithForm} from "./PopupWithForms";
 import {ImagePopup} from "./ImagePopup";
 
@@ -58,7 +57,7 @@ export function App(){
                     <input
                         id="name"
                         name="name"
-                        className="popup__item popup__input_type_name"
+                        className="popup__item"
                         type="text"
                         placeholder="Name"
                         minLength='2'
@@ -69,7 +68,7 @@ export function App(){
                     <input
                         id="about"
                         name="about"
-                        className="popup__item popup__input_type_job"
+                        className="popup__item"
                         type="text"
                         placeholder="About me"
                         minLength="2"
@@ -79,7 +78,7 @@ export function App(){
                     <span className="popup__error about-error"></span>
                 </PopupWithForm>
                 <PopupWithForm
-                    name="new place"
+                    name="new-place"
                     title="New Place"
                     submitButton="Create"
                     isOpen={isAddPlacePopupOpen}
@@ -88,7 +87,7 @@ export function App(){
                     <input
                         id="title"
                         name="title"
-                        className="popup__item popup__input_type_image-title"
+                        className="popup__item"
                         type="text"
                         placeholder="Title"
                         minLength="2"
@@ -124,14 +123,16 @@ export function App(){
                         id="image-input"
                         type="url"
                         name="avatar"
-                        className="popup__input popup__input_type_image-link"
+                        className="popup__item"
                         placeholder='Image Link'
                         required
                     />
                     <span className='popup__error image-input-error'></span>
                 </PopupWithForm>
-                <ImagePopup card={selectedCard} onClose={closeAllPopups}/>
-                <Footer/>
+                <ImagePopup
+                    card={selectedCard}
+                    onClose={closeAllPopups}/>
+                <Footer />
             </div>
         </div>
     );

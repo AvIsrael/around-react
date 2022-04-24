@@ -5,8 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import * as ReactDOMClient from "react-dom/client";
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'));
-
 root.render(<App tab='home' />);
+root.render(<App tab='profile' />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

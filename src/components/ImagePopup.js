@@ -1,6 +1,6 @@
 export const ImagePopup = ({card, onClose}) => {
     return (
-        <div className="popup" id="popup-viewer">
+        <div className={`popup ${card ? "popup_opened" : ""}`} id="popup-viewer">
             <div className="popup__viewer-wrapper">
                 <img className="popup__viewer-image"
                      src={card ? card.link : ""}

@@ -3,10 +3,9 @@ export const Card = ({onCardClick, card, onConfirmDeleteClick}) => {
         onCardClick(card);
     }
     return (
-
             <li className="elements__item">
-                <div className="elements__grid-image" onClick={handleClick}
-                     style={{backgroundImage: `url(${card.link})`}}></div>
+                <img className="elements__grid-image" onClick={handleClick}
+                    src = {`${card.link}`} alt={card.name.toString()}></img>
                     <div className="elements__info">
                         <h2 className="elements__description">{card.name}</h2>
                         <div className="elements__likes-zone">

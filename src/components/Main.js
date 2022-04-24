@@ -5,7 +5,7 @@ import {Card} from "./Card";
 export const Main = ({onEditProfileClick, onEditAvatarClick, onAddPlaceClick, onCardClick, onConfirmDeleteClick,
                      }) => {
     const [userName, setUserName] = useState("");
-    const [userJob, setUserJob] = useState("");
+    const [userDescription, setUserDescription] = useState("");
     const [userAvatar, setUserAvatar] = useState("");
     const [cards, setCards] = useState([]);
 
@@ -14,7 +14,7 @@ export const Main = ({onEditProfileClick, onEditAvatarClick, onAddPlaceClick, on
             .getUserInfo()
             .then((userData) => {
                 setUserName(userData.name);
-                setUserJob(userData.about);
+                setUserDescription(userData.about);
                 setUserAvatar(userData.avatar);
             })
             .catch((err) => {
@@ -48,7 +48,7 @@ export const Main = ({onEditProfileClick, onEditAvatarClick, onAddPlaceClick, on
                                 onClick={onEditProfileClick}>
                         </button>
                     </div>
-                    <p className="profile__role">{userJob}</p>
+                    <p className="profile__role">{userDescription}</p>
                 </div>
                 <button className="button profile__button"
                         type="button"
