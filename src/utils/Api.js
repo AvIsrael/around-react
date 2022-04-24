@@ -79,8 +79,9 @@ class Api extends React.Component {
     }
 }
 
-export const api = new Api({
+const api = new Api({
     baseUrl: "https://around.nomoreparties.co/v1/group-12", headers: {
         authorization: "cc8ab050-a9c0-4b6f-94ee-d21a7e05974a", "Content-Type": "application/json",
     },
 });
+export default api;

@@ -1,8 +1,8 @@
 import {useState, useEffect} from "react";
-import {api} from "../utils/Api";
-import {Card} from "./Card";
+import api from "../utils/Api";
+import Card from "./Card";
 
-export const Main = ({onEditProfileClick, onEditAvatarClick, onAddPlaceClick, onCardClick, onConfirmDeleteClick,
+const Main = ({onEditProfileClick, onEditAvatarClick, onAddPlaceClick, onCardClick, onConfirmDeleteClick,
                      }) => {
     const [userName, setUserName] = useState("");
     const [userDescription, setUserDescription] = useState("");
@@ -71,3 +71,4 @@ export const Main = ({onEditProfileClick, onEditAvatarClick, onAddPlaceClick, on
         </main>
     )
 }
+export default Main;

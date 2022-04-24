@@ -1,4 +1,4 @@
-export const ImagePopup = ({card, onClose}) => {
+const ImagePopup = ({card, onClose}) => {
     return (
         <div className={`popup ${card ? "popup_opened" : ""}`} id="popup-viewer">
             <div className="popup__viewer-wrapper">
@@ -14,3 +14,4 @@ export const ImagePopup = ({card, onClose}) => {
         </div>
 );
 }
+export default ImagePopup;

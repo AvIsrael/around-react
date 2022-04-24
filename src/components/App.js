@@ -1,9 +1,9 @@
-import {Header} from './Header';
-import {Footer} from "./Footer";
-import {Main} from "./Main";
+import Header from './Header';
+import Footer from "./Footer";
+import Main from "./Main";
 import {useState} from "react";
-import {PopupWithForm} from "./PopupWithForms";
-import {ImagePopup} from "./ImagePopup";
+import PopupWithForm from "./PopupWithForms";
+import ImagePopup from "./ImagePopup";
 
 export function App(){
     const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);

@@ -1,4 +1,4 @@
-export const PopupWithForm = ({
+const PopupWithForm = ({
     name,
     isOpen,
     title,
@@ -30,3 +30,4 @@ export const PopupWithForm = ({
         </div>
     )
 }
+export default PopupWithForm;

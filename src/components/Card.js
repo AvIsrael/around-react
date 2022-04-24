@@ -1,4 +1,4 @@
-export const Card = ({onCardClick, card, onConfirmDeleteClick}) => {
+const Card = ({onCardClick, card, onConfirmDeleteClick}) => {
     const handleClick = () => {
         onCardClick(card);
     }
@@ -21,3 +21,4 @@ export const Card = ({onCardClick, card, onConfirmDeleteClick}) => {
                             onClick={onConfirmDeleteClick}></button>
             </li>);
     }
+    export default Card;
