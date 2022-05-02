@@ -6,13 +6,10 @@ class Api extends React.Component {
         this._baseUrl = props.baseUrl;
         this._headers = props.headers;
     }
+
     _customFetch = (url, headers) => {
-        return fetch(url, headers).then((res) => {
-                if (res.ok) {
-                    return res.json()
-                }
-                return Promise.reject(`Error: ${res.status}`)
-            }
+        return fetch(url, headers).then((res) =>
+                res.ok ? res.json() : Promise.reject(`Error: ${res.status}`)
         );
     };
 
@@ -64,24 +61,18 @@ class Api extends React.Component {
         });
     }
 
-    likeCard(cardId) {
+    changeLikeCardStatus(cardId, isLiked) {
         return this._customFetch(`${this._baseUrl}/cards/likes/${cardId}`, {
             headers: this._headers,
-            method: "PUT",
-        });
-    }
-
-    unlikeCard(cardId) {
-        return this._customFetch(`${this._baseUrl}/cards/likes/${cardId}`, {
-            headers: this._headers,
-            method: "DELETE",
+            method: `${isLiked ? "DELETE" : "PUT"}`,
         });
     }
 }
 
 const api = new Api({
-    baseUrl: "https://around.nomoreparties.co/v1/group-12", headers: {
-        authorization: "cc8ab050-a9c0-4b6f-94ee-d21a7e05974a", "Content-Type": "application/json",
+    baseUrl: "https://around.nomoreparties.co/v1/group-12",
+    headers: {
+    authorization: "cc8ab050-a9c0-4b6f-94ee-d21a7e05974a", "Content-Type": "application/json",
     },
 });
 export default api;

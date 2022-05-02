@@ -1,4 +1,4 @@
-# Project 10: Around React
+# Project 11: Around React
 ## Link to project: [:compass:](https://avisrael.github.io/around-react/)
 
 
