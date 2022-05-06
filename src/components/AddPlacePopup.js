@@ -7,7 +7,7 @@ const AddPlacePopup = ({isOpen, onClose, onAddPlaceSubmit}) => {
     useEffect(() => {
         setTitle("");
         setLink("");
-    }, []);
+    }, [isOpen]);
     const handleTitleChange = (e) => {
         setTitle(e.target.value);
     }
@@ -38,7 +38,7 @@ const AddPlacePopup = ({isOpen, onClose, onAddPlaceSubmit}) => {
                 minLength="2"
                 maxLength="30"
                 onChange={handleTitleChange}
-                value={title || ""}
+                value={title}
                 required
             />
             <span className="popup__error title-error"></span>
@@ -49,7 +49,7 @@ const AddPlacePopup = ({isOpen, onClose, onAddPlaceSubmit}) => {
                 className="popup__item popup__input_type_image-link"
                 placeholder="Image Link"
                 onChange={handleLinkChange}
-                value={link || ""}
+                value={link}
                 required
             />
             <span className="popup__error image-link-error"></span>
